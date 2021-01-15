@@ -351,7 +351,7 @@ input:-webkit-autofill:focus {
 .header-area {
     background: #000000 url('images/parallax-2.jpg') no-repeat center 0px / cover;
     background-attachment: fixed;
-    background-size: auto cover;
+    background-size: cover auto;
 }
 
 .anlge-bg {
