@@ -107,6 +107,7 @@
                             .catch(error => console.log('Error!', error.message))
                         })
                     </script>
+                    
 
                 </div>
                 <div class="col-xs-12 col-md-7 header-text" style="margin-top: 3rem;">Scroll down for more details.</div>
@@ -319,6 +320,83 @@
         <div class="absolute footer-bg"></div>
         <div class="footer-top">
             <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-sm-offset-3 text-center">
+                        <div class="page-title">
+                            <h2 class="contact-form-footer">Contact Us</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-md-4">
+                        <address class="side-icon-boxes">
+                            <div class="side-icon-box">
+                                <div class="side-icon">
+                                    <img src="images/location-arrow.png" alt="">
+                                </div>
+                                <p>
+                                    <strong>Address: </strong> 
+                                    <a href="https://goo.gl/maps/Fsgqz5AzJKeWnkxL7" target="_blank">
+                                        OSP Ltd<br /> 
+                                        Station Road, Ballasalla<br /> 
+                                        Isle of Man IM9 2AE
+                                    </a>
+                                </p>
+                            </div>
+                            <div class="side-icon-box">
+                                <div class="side-icon">
+                                    <img src="images/phone-arrow.png" alt="">
+                                </div>
+                                <p><strong>Telephone: </strong>
+                                    <a href="callto:00441624612343">+44 (0)1624 612343</a>
+                                </p>
+                            </div>
+                            <div class="side-icon-box">
+                                <div class="side-icon">
+                                    <img src="images/mail-arrow.png" alt="">
+                                </div>
+                                <p><strong>E-mail: </strong>
+                                    <a href="mailto:hello@osp.im">hello@osp.im</a>
+                                </p>
+                            </div>
+                        </address>
+                    </div>
+                    <div class="col-xs-12 col-md-8">
+                        <form id="contact-form-footer" name="contact-form-footer" class="contact-form contact-form-footer">
+                            <input type="hidden" id="form-source" name="form-source" value="osp.im-contact">
+                            <div class="form-double">
+                                <input type="text" id="form-name" name="form-name" placeholder="Your name" class="form-control" required="required">
+                                <input type="email" id="form-email" name="form-email" class="form-control" placeholder="E-mail address" required="required">
+                            </div>
+                            <textarea name="form-message" id="form-message" name="form-message" rows="5" class="form-control" placeholder="Your message" required="required"></textarea>
+                            <button type="sibmit" class="button">Submit</button>
+                        </form>
+
+                        <div class="contact-form-footer-success" style="display: none;">
+                            <h2>Thank you for getting in touch.</h2>
+                            <p>We will get back to you as soon as we can.</p>
+                        </div>
+
+                        <script>
+                            const scriptURLFooter = 'https://script.google.com/macros/s/AKfycby9ggkbytzJV5dQ9FzFoTXUMa88HXlHK5IrJqjgAM9rd-jtdwCdj3IJIw/exec'
+                            const formFooter = document.forms['contact-form-footer']
+
+                            function SuccessFooter() {
+                                $('.contact-form-footer').hide();
+                                $('.contact-form-footer-success').show();
+                            };
+
+                            formFooter.addEventListener('submit', e => {
+                            e.preventDefault()
+                            SuccessFooter()
+                            fetch(scriptURLFooter, { method: 'POST', body: new FormData(formFooter)})
+                                .then(response => SuccessFooter())
+                                .catch(error => console.log('Error!', error.message))
+                            })
+                        </script>
+
+                    </div>
+                </div>
             </div>
         </div>
         
