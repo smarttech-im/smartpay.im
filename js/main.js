@@ -22,6 +22,13 @@
         animation: 'fade'
     });
 
+    /* clear emails
+    ===================*/
+    $(".email").each(function() {
+        $(this).html( $(this).html().replace("...", "@").replace(/\.\.\./g, ".") );
+        $(this).attr( "href", $(this).attr("href").replace("...", "@").replace(/\.\.\./g, ".") );
+    });
+
 
     /* Scroll
     ===================*/
