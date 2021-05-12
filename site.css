@@ -263,7 +263,6 @@ button {
 
 .overview h2 {
     text-align: center;
-    background: url(images/split-icon.png) no-repeat 50% 100%;
     padding-bottom: 30px;
 }
 
@@ -322,7 +321,6 @@ div.text p {
 
 .features div.text h2 {
     text-align: center;
-    background: url(images/split-icon.png) no-repeat 50% 100%;
     padding-bottom: 30px;
 }
 
@@ -334,22 +332,17 @@ div.text p {
 }
 
 .icon-grid div {
-    max-width: 200px;
     margin: 2em;
     text-align: center;
+    flex-basis: 25%;
 }
 
 /* Contact */
 
 .contact {
     background: #75cbe7;
-    background: -webkit-gradient(linear, left top, left bottom, from(#75cbe7), to(#138fc2));
-    background: linear-gradient(to bottom, #75cbe7 0%, #138fc2 100%);
-    background: linear-gradient(to bottom, #75cae76c 0%, #138fc2 100%), 
-        url(images/contact-parallax.jpg) no-repeat scroll center bottom / 100% auto;
+    background: #75cae76c url('images/contact-parallax.jpg') no-repeat center 0px / cover;
     color: #ffffff;
-    min-height: 50vh;
-    width: 100%;
 }
 
 .contact h2 {
@@ -372,6 +365,8 @@ div.text p {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    padding-left: 10vw;
+    padding-right: 10vw;
 }
 
 .contact address div {
@@ -379,6 +374,7 @@ div.text p {
     min-height: 100px;
     padding: 0 0 0 120px;
     margin-right: 2em;
+    margin-right: 0;
     padding-bottom: 1em;
     margin-bottom: 1em;
     font-style: normal;
@@ -432,14 +428,18 @@ div.text p {
 /* Medium Layout: 1280px. */
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
-    
+    .icon-grid div {
+        flex-basis: 40%;
+    }
 }
 
 
 /* Tablet Layout: 768px. */
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-    
+    .icon-grid div {
+        flex-basis: 40%;
+    }   
 }
 
 
@@ -454,7 +454,7 @@ div.text p {
     }
 
     .contact-form-footer {
-        margin:  0vw 8vw 0vw 8vw;
+        *margin:  0vw 0vw 0vw 8vw;
     }
 
     #email-form > input,
@@ -487,8 +487,12 @@ div.text p {
         display: none;
     }
 
+    .icon-grid div {
+        flex-basis: 55%;
+    }
+
     .contact address {
-        min-width: 100vw;
+        width: 100%;
     }
 
     .contact address div {
@@ -501,7 +505,7 @@ div.text p {
     }
 
     #contact-form-footer {
-        width: 100vw;
+        width: 100%;
         display: flex;
         justify-content: center;
         flex-direction: column;
