@@ -301,6 +301,12 @@ button {
     max-width: 600px;
 }
 
+.screenshots-item img {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 1em;
+}
+
 /* Features */
 
 .features {
