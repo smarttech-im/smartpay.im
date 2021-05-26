@@ -386,6 +386,10 @@ div.text p {
     font-style: normal;
 }
 
+.contact address {
+    padding: 0.5em;;
+}
+
 .contact address strong {
     padding-bottom: 1em;
 }
@@ -396,6 +400,7 @@ div.text p {
 
 .telephone-box {
     background: url(images/phone-arrow.png) 10% 0% no-repeat;
+    display: none;
 }
 
 .email-box {
