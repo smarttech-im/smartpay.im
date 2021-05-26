@@ -409,6 +409,7 @@ div.text p {
 
 #contact-form-footer {
     width: 40vw;
+    max-width: 642px;
 }
 
 #contact-form-footer input {
