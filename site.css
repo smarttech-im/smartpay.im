@@ -154,9 +154,8 @@ button {
     display: inline-block;
     list-style-type: none;
     list-style-position: inside;
-    margin: 0;
-    margin-left: -4px;
     padding: 0;
+    margin: 0 .5em 0 -4px;
 }
 
 .header .nav a {
@@ -341,6 +340,51 @@ div.text p {
     margin: 2em;
     text-align: center;
     flex-basis: 25%;
+}
+
+/* Calculator */
+
+.calculator {
+    background-color: #138fc2;
+    display: flex;
+    justify-content: center;
+    color: #ffffff;
+}
+
+.calculator h2 {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.calculator div {
+    width: 80vw;
+    max-width: 600px;
+}
+
+.calculator a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.calculator .pie {
+    text-align: center;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+}
+
+.calculator .botton {
+    text-align: center;
+    margin-top: 10vh;
+}
+
+.calculator .botton > a {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #11bb11;
+    border-radius: 4px;
+    padding: 1em;
+    border: 1px solid #11bb11;
+    min-width: 8em;
 }
 
 /* Contact */
