@@ -200,7 +200,7 @@ button {
 /* Sections */
 
 .section {
-    min-height: 100vh;
+    min-height: calc(100vh - 45px);
     height: auto;
     padding: 5em 0 5em 0;
 }
@@ -222,10 +222,6 @@ button {
     left: 20vw;
 }
 
-.home > div {
-    max-width: 30em;
-}
-
 #email-form input {
     width: 30vw !important;
     min-width: 144px;
@@ -241,6 +237,19 @@ button {
     padding-top: 4em;
     text-decoration: none;
     color: #ffffff;
+}
+
+.home a.button {
+    text-align: center;
+    margin-top: 3em;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #11bb11;
+    border-radius: 4px;
+    padding: 1em;
+    border: 1px solid #11bb11;
+    min-width: 8em;
+    width: 16em;
 }
 
 #email-form-success {
@@ -349,6 +358,7 @@ div.text p {
     display: flex;
     justify-content: center;
     color: #ffffff;
+    padding-top: 6em;
 }
 
 .calculator h2 {
@@ -387,12 +397,77 @@ div.text p {
     min-width: 8em;
 }
 
+/* Price */
+
+.price {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: space-between;
+    padding-top: 6em;
+}
+
+.price h2 {
+    text-align: center;
+}
+
+.price b {
+    display: block;
+}
+
+.price p {
+    width: 80vw;
+    max-width: 600px;
+    padding-bottom: 30px;
+}
+
+.price .price-choice {
+    width: 60vw;
+    padding: 1em;
+    display: flex;
+    border: solid 1px #cbcbcb;
+    border-radius: 6px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 1em;
+    box-shadow: 0px 0px 3px 0px #93bef3;
+}
+
+.price .price-choice > * {
+    min-width: 100px;
+}
+
+.price .price-value {
+    font-size: 3rem;
+    color: rgba(46, 126, 235, 0.86);
+    display: block;
+    margin-top: -10px;
+    margin-bottom: -10px;
+}
+
+.price a.button {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #11bb11;
+    border-radius: 4px;
+    padding: .5em;
+    border: 1px solid #11bb11;
+    min-width: 8em;
+    display: inline-block;
+    text-align: center;
+}
+
 /* Contact */
 
 .contact {
     background: #75cbe7;
     background: #75cae76c url('images/contact-parallax.jpg') no-repeat center 0px / cover;
     color: #ffffff;
+    min-height: calc(100vh - 240px);
+    max-height: 100vh;
 }
 
 .contact h2 {
