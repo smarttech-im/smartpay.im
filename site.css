@@ -813,3 +813,29 @@ div.text p {
     from {margin-left: -50vw; opacity: 0;}
     to {margin-left: 0px; opacity: 1 !important;}
 }
+
+.cookie-consent {
+    position: fixed;
+    width: 500px;
+    bottom: 1rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: #ffffffde;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 4px;
+}
+
+.cookie-consent a.button {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #11bb11;
+    border-radius: 4px;
+    padding: .5em;
+    border: 1px solid #11bb11;
+    min-width: 8em;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+}

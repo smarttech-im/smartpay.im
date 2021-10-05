@@ -400,6 +400,12 @@
         <!-- Contact end -->
 
     </div>
+
+    <div class="cookie-consent" id="cookie-consent">
+        <p>🍪 SmartPay.im uses cookies to improve your experience and analyse our traffic. By clicking “Accept” you agree to allow our cookies.</p>
+        <a class="button" id="cookie-consent-accept">Accept</a>
+        <a class="button" id="cookie-consent-reject">Reject</a>
+    </div>
     
     
     <script src="site.js"></script>
@@ -408,9 +414,84 @@
     <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
+
+    // Default ad_storage to 'denied'.
+    gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'analytics_storage': 'denied'
+    });
+
     gtag('js', new Date());
 
     gtag('config', 'G-S53D43N2K9');
+    
+    function setCookie(name, value, daysToLive) {
+        // Encode value in order to escape semicolons, commas, and whitespace
+        var cookie = name + "=" + encodeURIComponent(value);
+        
+        if(typeof daysToLive === "number") {
+            /* Sets the max-age attribute so that the cookie expires
+            after the specified number of days */
+            cookie += "; max-age=" + (daysToLive*24*60*60);
+            
+            document.cookie = cookie;
+        }
+    }
+
+    function getCookie(name) {
+        // Split cookie string and get all individual name=value pairs in an array
+        var cookieArr = document.cookie.split(";");
+        
+        // Loop through the array elements
+        for(var i = 0; i < cookieArr.length; i++) {
+            var cookiePair = cookieArr[i].split("=");
+            
+            /* Removing whitespace at the beginning of the cookie name
+            and compare it with the given string */
+            if(name == cookiePair[0].trim()) {
+                // Decode the cookie value and return
+                return decodeURIComponent(cookiePair[1]);
+            }
+        }
+        
+        // Return null if not found
+        return null;
+    }
+    
+    function setConsent(pref) {
+        var consentBox = document.getElementById("cookie-consent");
+        if (consentBox === undefined) {
+            return;
+        }
+        consentBox.style.visibility = "hidden";
+        if (pref) {
+            gtag('consent', 'update', {
+            'ad_storage': 'granted',
+            'analytics_storage': 'granted'
+            });
+            setCookie('Consent', 'yes', 30);
+        } else {
+            setCookie('Consent', 'no', 30);
+        }
+    }
+
+    document.getElementById("cookie-consent-accept").addEventListener("click", function() {
+        setConsent(true);
+    });
+    
+    document.getElementById("cookie-consent-reject").addEventListener("click", function() {
+        setConsent(false);
+    });
+
+    var consentValue = getCookie('Consent');
+    if (consentValue !== null) {
+        if (consentValue === 'yes') {
+            setConsent(true);
+        } else {
+            setConsent(false);
+        }
+    }
+
     </script>
 </body>
 </html>
