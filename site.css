@@ -817,6 +817,7 @@ div.text p {
 .cookie-consent {
     position: fixed;
     width: 500px;
+    max-width: 100%;
     bottom: 1rem;
     left: 0;
     right: 0;
