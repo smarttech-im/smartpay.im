@@ -397,6 +397,46 @@ div.text p {
     min-width: 8em;
 }
 
+/* Docs */
+
+.docs {
+    background-color: #138fc2;
+    display: flex;
+    justify-content: center;
+    color: #ffffff;
+    padding-top: 20%;
+}
+
+.docs h2 {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.docs div {
+    width: 80vw;
+    max-width: 600px;
+}
+
+.docs a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.docs .botton {
+    text-align: center;
+    margin-top: 10vh;
+}
+
+.docs .botton > a {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #11bb11;
+    border-radius: 4px;
+    padding: 1em;
+    border: 1px solid #11bb11;
+    min-width: 8em;
+}
+
 /* Price */
 
 .price {

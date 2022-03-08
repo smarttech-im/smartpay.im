@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Pay Docs</title>
+    <link rel="shortcut icon" type="image/png" href="../images/favicon.png" />
+    <link rel="stylesheet" href="site.css">
+</head>
+<body>
+    <a class="menu-icon" onclick="toggleMenu(true)">&nbsp;</a>
+    <div class="sidebar hidden-on-phone">
+        <div class="links" onclick="toggleMenu(false)">
+            <a class="logo" href="/docs"></a>
+            <div class="chapters">
+                <a href="#getting-started" class="chapter-header">Getting Started</a>
+                <a href="#getting-started">Create your account</a>
+                <a href="#getting-started-setupcompany">Set up your company</a>
+                <a href="#getting-started-people">Add your people</a>
+                <a href="#getting-started-payroll">Run your first payroll</a>
+                <a href="#dashboard" class="chapter-header">Dashboard</a>
+                <a href="#company" class="chapter-header">Company</a>
+                <a href="#company-payrolls">Payrolls</a>
+                <a href="#company-open-payrolls">Open payrolls</a>
+                <a href="#company-open-departments">Departments</a>
+                <a href="#company-open-banking">Banking</a>
+                <a href="#company-open-projects">Projects</a>
+                <a href="#company-open-email-template">Email Template</a>
+                <a href="#people" class="chapter-header">People</a>
+                <a href="#people-personal">Personal</a>
+                <a href="#people-salary">Employment and Salary</a>
+                <a href="#people-pay-types">Pay Types</a>
+                <a href="#people-ni-and-tax">Tax / NI</a>
+                <a href="#people-pension">Pension</a>
+                <a href="#people-banking">Banking</a>
+                <a href="#people-payments">Payments</a>
+                <a href="#payroll-details" class="chapter-header">Payroll Details</a>
+                <a href="#payroll-details-open">Open</a>
+                <a href="#payroll-details-payments">Payments</a>
+                <a href="#payments" class="chapter-header">Payments</a>
+                <a href="#approvals" class="chapter-header">Approvals</a>
+            </div>
+        </div>
+    </div>
+   
+    <div class="content">
+
+        <!-- Screenshots taken using width 1240 -->
+        <section>
+            <div id="getting-started">
+                <h1>Getting Started</h1>
+                <h2>Create your account</h2>
+                <p>The first step is to create a free account. This will give you free access to the full system for a month. </p>
+                <p class="note">If you have a very complex payroll or just need a little more time to figure out if Smart Pay is right for you, let us know we can normally extend the trial out.</p>
+                <p>To create your account simply follow the <b>Get Started</b> link from the top of <a target="_blank" href="https://smartpay.im/">smartpay.im</a> or follow this link. <a target="_blank" href="https://app.smartpay.im/Identity/Account/Register">Register user.</a></p>
+                <p>This is where you set your email address and password, make it a good one as it is keeping your payroll safe. When it's all in click the <b>Register</b> button.</p>
+                <p>If you want to turn on two-factor authentication, this can be done from the settings inside Smart Pay. If you don't know what two-factor authentication is, the short answer is it's a security thing and a good idea. Here is a <a target="_blank" href="https://computing.which.co.uk/hc/en-gb/articles/360000243980-What-is-two-factor-authentication-and-should-you-use-it-">longer explanation</a> if you want to know more.</p>
+                <p>Smart Pay will send you an email to confirm your email address. So you should have a new email with the subject <b>Confirm your email</b>. This is likely the first email we have sent you so if you can't find it don't forget to check your spam folder.</p>
+                <p>In the email, there is a <b>Verify your email</b> button follow this to confirm your address. That's your account setup. Follow the <b>Login</b> link to log in.
+                    This might be a good time to bookmark the login page or <a target="_blank" href="https://app.smartpay.im">https://app.smartpay.im</a> so you can get back easily.</p>
+            </div>
+    
+            <div id="getting-started-setupcompany">
+                <h2>Set up your company</h2>
+                <p>Once you have signed in you will be taken to a welcome screen. You can buy a licence at this point, but for this manual, we are assuming you are going for the free trial. So follow the <b>Start Free Trial</b> button.</p>
+                <p>The next screen asks for a few basic details about your company. If you don't have something like your ITIP Reference on you right now, don't worry it can always be filled in later. When you are finished click <b>Next</b>.</p>
+                <p>Departments, Smart Pay breaks employees up into departments, you need to have at least one department, but you can have as many as you want. Just click <b>Add Department</b> and give it a name. Once you are ready click <b>Next</b>.</p>
+                <p>Pay Frequencies, how often do you pay your staff? Smart Pay supports Monthly, 4 Weekly and Weekly. Just tick the ones that apply to your company and then <b>Next</b>.</p>
+                <p>Banking, allows you to create bank files with the full list of payments for each payroll. This can be uploaded to your bank's website to process the payments in one go. If this sounds useful click <b>Yes</b>. If you do this manually or you pay your staff by cheque click <b>No</b>.</p>
+                <p>That's your company all set up. If you want to change anything click <b>Back</b> to go back a page, if you are happy click <b>Create</b>.</p>
+                <p class="note">Smart Pay automatically saves the page every time you change fields or click on a button. So don't worry about saving your progress, it will all still be there when you log back in. Also fields like the Registration number that always come in a specific format have placeholder text to give you a bit of a hit of what we're expecting.</p>
+            </div>
+            
+            <div id="getting-started-people">
+                <h2>Add your people</h2>
+                <p>You can't have a payroll without people. So the next step is to add a few details about the people you will be paying. </p>
+                <p class="note">For the sake of this manual we are assuming you are paying employees not sub-contractors, sub-contractors work a little differently. We will cover sub-contractors in a future manual. Until then if you are paying sub-contractors, please let us know and we will be happy to walk you through the process.</p>
+                <p>Now you have your company set up, you should be looking at the People list. To add your first employee just click the <b>Add</b> button at the top.</p>
+                <p>First, off it will ask you a few personal details about your employee. Forename, Surname, Address. Once you have those details in. Click <b>Next</b>.</p>
+                <p>Second, it asks for salary information. This lets you select the payroll, to dictate how often the employee is paid. as well as set their salary and working hours. Once you are happy click <b>Next</b>.</p>
+                <p class="note">For monthly payrolls, the salary pay items are worked out from the annual salary down. This means you can input their annual salary and the monthly, weekly, daily, and hourly rates are worked out automatically. Click the <b>Salary breakdown</b> link if you would like to change these manually.</p>
+                <p>Next, is the NI and tax reference numbers. Not much to say here.</p>
+                <p>Pension, if you or your employee contribute directly to their pension this is where you input the values. The contributions will be included in each payroll automatically, but they can always be overridden if needed.</p>
+                <p>Click <b>Finish</b> and your employee is set up. You can now close your first employee and run your first payroll or add another employee.</p>
+
+            </div>
+
+            <div id="getting-started-payroll">
+                <h2>Run your first payroll</h2>
+                <p>Once your employees are set up, run your payroll by selecting <b>Company</b> on the left menu then clicking <b>Run Payroll</b> next to the payroll name.</p>
+                <p>After a second, you will be shown the <a href="#payroll-details">Payroll Details</a>. This is where you can add any new pay types or change the employee's hours.</p>
+                <p>Once you are happy click <b>Complete</b>. Smart Pay will then work out all the payment lines and create the payslip reports for your payroll run. From here by clicking on an employee's name you can see their payment breakdown as well as print out their payslip. You can also print out Pension, Accounting and Payment List reports and of course email the payslips directly to all your employees.</p>
+                <p class="note">If you have input banking details for your company and employees this is where you can download the bank instruction file to upload to your bank's website. If not the Payment List report will give you a breakdown of the payments due to each employee.</p>
+                <p>If something doesn't look right, the <b>Remove</b> button will take you back to the <a href="#payroll-details">Payroll Details</a> so you can make any changes necessary. </p>
+                <p>If you need to come back to the payroll later, an <b>open payroll</b>, one that hasn't been completed yet, can be reopened by going to <b>Company</b> and clicking on the payroll name under open payrolls. If the payroll is closed then the complete payroll history is available under <b>Payments</b> on the left menu.</p>
+                <p>That's it, you have input your company and employee details and run your first payroll. Until next week, you're all done!</p>
+            </div>
+        </section>
+
+
+        <section>
+            <div id="dashboard">
+                <h1>Dashboard</h1>
+                <p>This is where you can get a heads up about upcoming deadlines or bank holidays, change account settings such as your password, change your licence level, and download the data archive.</p>
+                <p>If your company is growing and you need to pay more employees, the licence button will allow you to change your licence level. The licences are charged annually, so if you change the level partway through a year the new licences will be discounted based on how much time is left on the current licence.</p>
+                <p>Settings will allow you to update your account settings. This is where you can update your password, change your email, or turn on two-factor authentication. Two-factor authentication is recommended as it will enhance your account security.</p>
+                <p>The data archive is a complete history of the reports generated for you by Smart Pay. It is a good idea to download the data archive now and then so that you have a local copy of your payroll information.</p>
+                <p>You can get back to the dashboard, by clicking on the logo on the top left.</p>
+            </div>
+        </section>
+
+
+        <section>
+            <div id="company">
+                <h1>Company</h1>
+                <p>The company is where you can change details about your company such as address and registration number, as well as manage lists attached to the company.</p>
+            </div>
+            <div id="company-payrolls">
+                <h2>Payrolls</h2> 
+                <p>The most notable list attached to the company is the payrolls list. You can modify payrolls by clicking on the payroll name. This will let you change the current period, payroll name, or payroll frequency for a given payroll. New payrolls can also be added to the list as well as old payrolls removed. </p>
+                <p class="note">You can not remove a payroll if it has people attached.</p>
+                <p>When editing payrolls you can also set the payroll day and select create automatically. If create automatically is turned on Smart Pay will automatically run the payroll on the payroll day and send you an email with the <a href="#payroll-details">Payroll Details</a>.</p>
+                <p>The <b>run payroll</b> button will open a new run for the selected payroll. This will create the default payroll lines and take you to the <a href="#payroll-details">Payroll Details</a> page. From there you can edit the employee hours and/or add one-off payments. Find out more under <a href="#payroll-details">Payroll Details</a>.</p>
+            </div>
+            <div id="company-open-payrolls">
+                <h2>Open payrolls</h2>
+                <p>If you create a new payroll with the run payroll button, but don't complete it there and then it will appear in the company under <b>open payrolls</b> next time you open the company. To go back to the <a href="#payroll-details">Payroll Details</a> simply click on the line next to the payroll name.</p>
+            </div>
+            <div id="company-open-departments">
+                <h2>Departments</h2>
+                <p>The employees are split up into departments. This is useful because it allows you to set department heads with the ability to approve timesheets. </p>
+                <p>By default there is one department called "Main Department" you can rename this and add as many as you like, but need to have at least one. The departments can be edited by clicking on the line next to the department name.</p>
+            </div>
+            <div id="company-open-banking">
+                <h2>Banking</h2>
+                <p>Banking allows Smart Pay to produce a bulk payment instruction file that can be uploaded to your bank's website to pay your staff.</p>
+                <p>To do this the banks require payer and beneficiary account details. This is where you can input the payer details. To edit the banking info click the edit button on the right.</p>
+                <p>That will take you to the banking details, this needs to be set to the bank account you pay funds out from to pay your staff. It is worth taking a note of the output format field as this will be used to pick which format Smart Pay saves the payment file to. Once you are happy simply click back to details to go back to the company</p>
+            </div>
+            <div id="company-open-projects">
+                <h2>Projects</h2>
+                <p>Projects are categories the employee timesheets can be grouped into. When an employee puts in a timesheet line from the employee portal they will be given the list of projects to pick from. They would normally be based on the pay types the employees have available such as standard time, overtime and the like. Or if the employee does client work then they could just as well be linked to a client-specific code.</p>
+            </div>
+            <div id="company-open-email-template">
+                <h2>Email Templates</h2>
+                <p>The Email Template allows you to override the standard wording when payslips are sent out to your employees.</p>
+                <p>To edit the template click the edit button to the right. Then simply enter the payslip email wording and a preview of the final email will appear below.</p>
+                <p>For values that will change between emails, the template uses placeholders that get replaced by the real values when the email is sent. The preview uses a payment to a fictitious employee called "Jane Doe" to allow you to see what it would look like in a real email.</p>
+                <p>To use the placeholders simply put the value name between braces in place of the real value. So to add a greeting to the top of your email you might start by inputting "Dear {title} {surname}" that would then come out as "Dear Miss Doe".</p>
+                <img src="screenshots/email-template.png" alt="email template" />
+                <p>The placeholders currently supported are.</p>
+                <ul>
+                    <li>{title}</li>
+                    <li>{forename}</li>
+                    <li>{surname}</li>
+                    <li>{fullname}</li>
+                    <li>{period}</li>
+                    <li>{paydate}</li>
+                    <li>{periodname}</li>
+                    <li>{paymonth}</li>
+                    <li>{payday}</li>
+                    <li>{date}</li>
+                    <li>{year}</li>
+                    <li>{salary}</li>
+                    <li>{gross}</li>
+                    <li>{niee}</li>
+                    <li>{nier}</li>
+                    <li>{tax}</li>
+                    <li>{paymenttype}</li>
+                    <li>{gender}</li>
+                    <li>{department}</li>
+                    <li>{company}</li>
+                </ul>
+            </div>
+        </section>
+
+
+        <section>
+            <div id="people">
+                <h1>People</h1>
+                <p>The people page lists all the people that work for your company. You can add someone new with the add button at the top, or click on the line next to an employee's name to view and edit their details.</p>
+                <P>Like the company, the employee details are split up into sections. To edit any of the sections simply click the edit button to the right. Then when you are finished click back to details to get back to the main screen.</P>
+            </div>
+            <div id="people-personal">
+                <h2>Personal</h2>
+                <p>The personal section covers their contact information such as their address, phone number, and email. As well as a few points that relate to the payroll such as their marital status and if they require a work permit.</p>
+            </div>
+            <div id="people-salary">
+                <h2>Employment and Salary</h2>
+                <p>Employment and salary cover two halves. Their employment information such as the department, start date, status, and the payroll they belong to. </p>
+                <p>The salary can be set in two ways. </p>
+                <p>For monthly payrolls it is set from the top down, so you set the annual salary and update the weeks per year, days per week and hours per week as needed. Then Smart Pay works out the monthly, weekly, daily, and hourly rates from that. The salary breakdown link will let you manually override these if necessary.</p>
+                <p>For weekly payrolls, it is set from the bottom up. So you set the hourly salary and up from there.</p>
+            </div>
+            <div id="people-pay-types">
+                <h2>Pay Types</h2>
+                <p>Pay types are pay components that could be included in a payroll for the employee but, are not worked out from the main salary. Possible examples are a holiday pay rate or a bonus for working on the weekend.</p>
+                <p>You can add a new type by clicking the edit button on the right then, add a new type. For the new type, it will ask for a name, default units, and default value. The defaults can be overridden in the payroll but if you know what they are in advance it makes it easier to input each time. If both defaults have a value then the type will be added automatically to each new payroll. Otherwise, one can be left at zero and the type will be available in the payroll but won't be added automatically.</p>
+                <p>The new type also has a number of flags that change the ways it behaves when the payroll run is completed. The flags work by deciding if the line total value for that type is included in various calculations.</p>
+                <ul class="label-description">
+                    <li>
+                        <span>Include when working out Tax</span>
+                        <span>This includes the value in the taxable balance. Or another way of putting it is for tax, this makes it a gross value, not net.</li></span>
+                    </li>
+                    <li>
+                        <span>Include when working out NIee</span>
+                        <span>This includes the value when working out NI for the employee. Or another way of putting it is for NIee, this makes it a gross value, not net.</span>
+                    </li>
+                    <li>
+                        <span>Include when working out Nier</span>
+                        <span>This includes the value when working out NI for the employer. Or another way of putting it is for NIer, this makes it a gross value, not net.</span>
+                    </li>
+                    <li>
+                        <span>Is a deduction</span>
+                        <span>This means that the value is deducted from the total not added to it.</span>
+                    </li>
+                    <li>
+                        <span>Include in Pension percentage</span>
+                        <span>If the employee has a percentage of their wage that goes to their pension, then this included the pay type value in the total that the percentage is worked out from.</span>
+                    </li>
+                    <li>
+                        <span>Is an Expense</span>
+                        <span>This included the value in expense reporting.</span>
+                    </li>
+                    <li>
+                        <span>Is a director’s fee</span>
+                        <span>This includes the value in the director's fee totals.</span>
+                    </li>
+                    <li>
+                        <span>Is sick pay</span>
+                        <span>This includes the value in sick pay reporting.</span>
+                    </li>
+                    <li>
+                        <span>Is Holiday Pay</span>
+                        <span>This includes the value in holiday reporting.</span>
+                    </li>
+                </ul>
+                <p>So for the weekend bonus example from before. It could be set up with a name of "Weekend Bonus", a default value of say, £100, why not it's a nice round number. Zero default units, because they don't get it unless they work at the weekend. Then a tick in Include when working out Tax, Include when working out NIee, and Include when working out Nier to included it in the normal tax deductions.</p>
+            </div>
+            <div id="people-ni-and-tax">
+                <h2>NI / Tax</h2>
+                <p>NI / Tax is where you can enter the tax code and NI number for your employee. Click the edit button on the right to change the numbers.</p>
+            </div>
+            <div id="people-pension">
+                <h2>Pension</h2>
+                <p>The pension section allows you to track pensions contributions as part of the payroll. Click the edit button to change the contribution numbers.</p>
+                <p>The pension contributions are split up into two sections.</p> 
+                <p>Employee contributions, so contributions made by the employee that get deducted from the gross salary and invested directly into their pension fund.</p>
+                <p>Employer contributions, so contributions made by you the employer as an addition to the salary.</p>
+                <p>Both of these types can be percentages of the salary or fixed values. If you put a value in the employee or employer contributions they will appear as separate lines on the payroll for that employee.</p>
+            </div>
+            <div id="people-banking">
+                <h2>Banking</h2>
+                <p>Banking allows Smart Pay to produce a bulk payment instruction file that can be uploaded to your bank's website to pay your staff.</p>
+                <p>To do this the banks require payer and beneficiary account details. This is where you can input the beneficiary details. To edit the banking info click the edit button on the right then <b>add new account</b>.</p>
+                <p>This needs to be set to the bank account your employee has given you to pay their salary into. You can enter more than one account for an employee if they have requested the funds to be split, however, in most cases just one account will do.</p>
+                <p>Once you are happy simply click back to details to go back to the employee.</p>
+            </div>
+            <div id="people-payments">
+                <h2>Payments</h2>
+                <p>The payments section gives you the complete payment history for this employee in Smart Pay. Clicking edit on the right will give you a list of payments along with the period, pay and year to date numbers. The payslip button will also allow you to reprint the payslip.</p>
+                <p>If an employee has asked for another copy of a payslip, this is the place to go.</p>
+            </div>
+        </section>
+
+
+        <section>
+            <div id="payroll-details">
+                <h1>Payroll Details</h1>
+                <p>Payroll Details is where you run each payroll. This is where you can override the salary, add in custom hours, add a new pay type, even complete the payroll and send the payslip emails. In short, there is quite a lot you can do on this page.</p>
+            </div>
+            <div id="payroll-details-open">
+                <h2>Open Payroll</h2>
+                <p>While the payroll is open, payroll details will list all the employees on the payroll, along with their gross pay, tax deductions and net salary. If you want to see the breakdown click on the line next to the employee name and it will show you all the pay items for that employee.</p>
+                <p>From here you can add another salary item with the <b>add salary item</b> button or add a pay type with the <b>add pay type</b> button. The salary items are calculated from the main salary, so hourly, daily, double-time and the like. Pay items are any custom items you have added from the employee page. So job-related bonuses or expense payouts. If you want to remove any of the items from the payroll, click the X on the right.</p>
+                <img src="screenshots/new-pay-type.png" alt="new pay type" />
+                <p>You can add a new pay type with the <b>add new type</b> button. This works in the same way as the pay types from the employee, look under employee <a href="#people-pay-types">Pay Types</a> for more info. By default, new types only apply to this payroll, if you want the new pay type to be included in the next payroll tick the Keep option.</p>
+                <p class="note">If you are running your payroll a few days in advance. You can override the payroll date from the box at the top. When the payroll is completed, all the payments will be tagged with this date.</p>
+            </div>
+            <div id="payroll-details-payments">
+                <h2>Payments</h2>
+                <p>When the payroll is completed, the payroll details page shows the payment breakdown for each employee on the payroll, as well as gives you the email and reporting options.</p>
+                <p>This is where you can print out your payment list, accounts and pension reports, download the bank instruction files and send the payslip emails.</p>
+                <p>If you want more details you can click the line next to the employee name and it will give you the payment breakdown as well as let you print the payslip and T14 reports.</p>
+                <img src="screenshots/payment-details.png" alt="Payment details" />
+                <p>If it doesn't look right, the <b>remove</b> button will reopen the payroll and allow you to change the payment lines.</p>
+            </div>
+        </section>
+
+
+        <section>
+            <div id="payments">
+                <h1>Payments</h1>
+                <p>The payments section allows you to see all the payment batches that have been run inside Smart Pay. When you click on payments in the menu it will give you a list of all of the payment batches that have yet to be sent out to the employees. If you want to see batched that have already been sent out as well, click the <b>show complete</b> button.</p>
+                <p>To see the full breakdown click the payment batch line and it will open the <a href="#payroll-details">Payroll Details</a> page for that batch. More on the <a href="#payroll-details">Payroll Details</a> page can be found under <a href="#payroll-details">Payroll Details</a>.</p>
+            </div>
+        </section>
+
+
+        <section>
+            <div id="approvals">
+                <h1>Approvals</h1> 
+                <p>Approvals allow you to approve employee timesheets. Approving a timesheet changes the timesheet status when you run the payroll. If there is an issue with the timesheet you can send it back to the employee with a note explaining the reason for rejection.</p>
+                <p>Alternatively, employees can be named as department heads from the company <a href="#company-open-departments">Department Details</a>. That will give them the right to approve timesheets for employees in their department. You will be able to see if a department head has approved a timesheet from here and when you run the payroll from the <a href="#payroll-details">Payroll Details</a> page.</p>
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+
+        // Show hide the menu
+        var toggleMenu = function (showEl) {
+            const collection = document.getElementsByClassName("sidebar");
+            if (collection.length !== 1) {
+                return;
+            }
+            const menu = collection[0];
+            if (showEl) {
+                menu.classList.remove('hidden-on-phone');
+            } else {
+                menu.classList.add('hidden-on-phone');
+            }
+        };
+    </script>
+</body>
+</html>

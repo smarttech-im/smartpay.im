@@ -1,0 +1,241 @@
+
+:root {
+    --colour-text: #404040;
+    --colour-link: #2980B9;
+    --colour-highlight: #40a1da;
+    --colour-highlight-alt: #ffffff;
+    --colour-highlight-bg: #40a2da2f;
+    --colour-bg: #ffffff;
+    --colour-bg-menu: #f8f8f8;
+}
+
+html body {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    font-family: "Lato","proxima-nova","Helvetica Neue",Arial,sans-serif;
+    font-weight: normal;
+    color: var(--colour-text);
+}
+
+.sidebar {
+    min-width: 16em;
+    min-height: 100vh;
+    padding: 1em 0em 1em 1em;
+    margin-right: 4em;
+    text-align: right;
+    background-color: var(--colour-bg);
+    position: sticky;
+    top: 0;
+    overflow: scroll;
+    max-height: 100vh;
+    scrollbar-width: thin;
+    scrollbar-color: var(--colour-highlight-bg) var(--colour-bg);
+}
+
+.sidebar::-webkit-scrollbar {
+    width: 12px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background: var(--colour-bg);
+    height: 20%;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background-color: var(--colour-highlight-bg);
+    border-radius: 20px;
+    border: 3px solid --colour-bg-menu;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+    background-color: var(--colour-highlight);
+}
+
+.menu-icon {
+    display: none;
+}
+
+.links {
+    min-width: 16em;
+    padding-right: 1em;
+}
+
+.logo {
+    display: block;
+    font-size: 1.25rem;
+    line-height: inherit;
+    white-space: nowrap;
+    position: relative;
+    fill: var(--colour-highlight);
+    color: var(--colour-highlight);
+    min-height: 50px;
+    background: url('logo.svg') no-repeat 0px 0px;
+}
+
+.logo .docs {
+    top: 7px;
+    left: 128px;
+    font-size: 1.8em;
+    letter-spacing: 0px;
+    position: absolute;
+}
+
+.chapters  {
+    /* padding-top: 3em; */
+}
+
+.chapters > *  {
+    display: block;
+    margin-bottom: 0.3em;
+    text-decoration: none;
+    padding-left: 2em;
+}
+
+.chapters > a.chapter-header {
+    padding-left: 1em;
+    font-size: 1.7em;
+    text-transform: capitalize;
+    margin-top: 1em;
+}
+
+.content {
+    background-color: var(--colour-bg);
+    max-width: 50em;
+    padding: 1em;
+}
+
+h1 {
+    padding: 2em 0;
+    font-size: 3em;
+    text-transform: capitalize;
+}
+
+h2 {
+    margin-top: 4em;
+}
+
+p {
+    color: var(--colour-text);
+    font-size: 1.1em;
+    line-height: 1.5em;
+    margin: 1.25em 0em;
+}
+
+p.note {
+    border-radius: 0.2em;
+    padding: 1em;
+    margin-left: 6em;
+    background: url('note.svg') no-repeat 0px 0px;
+    background-size: 5em;
+    background-color: var(--colour-highlight-bg);
+    padding-top: 3em;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: var(--colour-link);
+}
+
+li {
+    margin-bottom: 0.5em;
+}
+
+.label-description > li > * {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.label-description > li *:first-child {
+    width: 35%;
+}
+
+.label-description > li *:last-child {
+    width: 55%;
+}
+
+
+/* mobile view */
+@media (max-width: 800px) {
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        min-width: 0;
+    }
+
+    .menu-icon {
+        display: block;
+        background: url('menu.svg') no-repeat;
+        background-size: 100%;
+        background-color: var(--colour-highlight-alt);
+        width: 1.5em;
+        height: 1.5em;
+        position: fixed;
+        top: 1em;
+        right: 1em;
+        border: solid 0.2em var(--colour-highlight-alt);
+        border-radius: 0.2em;
+    }
+
+    .hidden-on-phone {
+        display: none;
+    }
+    
+    .content {
+        padding: 0;
+        margin: 0;
+    }
+
+    h1 { 
+        background-color: var(--colour-highlight);
+        color: var(--colour-highlight-alt);
+        width: 100%;
+        text-align: center;
+        padding: 2em 0em;
+        margin: 0;
+        font-size: 1.5em;
+        font-weight: 500;
+        text-transform: capitalize;
+    }
+
+    h2 {
+        margin: 2em 1rem;
+    }
+
+    p {
+        margin: 1em 1rem;
+    }
+
+    p.note {
+        margin: 1em 0em;
+    }
+}
+
+/* print view */
+@media print {
+    h1 { 
+        color: var(--colour-text);
+        font-size: 2.5em;
+    }
+    
+    section > div {
+        break-after: page;
+
+    }
+}

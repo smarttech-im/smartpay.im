@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="8" viewBox="0 0 20 8" fill="#40a1da">
+  
+  <path d="M0 0v8l2-2 2 2v-8h-4z" transform="translate(2)" />
+  <text x="7" y="8" font-family="'Helvetica Neue'" font-size="8px" letter-spacing="0px" stroke-width="2" style="line-height:1.25">
+      <tspan  font-family="'Helvetica Neue'" font-size="4px" stroke-width="2.0019">Note</tspan>
+  </text>
+</svg>
