@@ -179,6 +179,10 @@ li {
         min-width: 0;
     }
 
+    .links {
+        text-align: left;
+    }
+
     .menu-icon {
         display: block;
         background: url('menu.svg') no-repeat;
