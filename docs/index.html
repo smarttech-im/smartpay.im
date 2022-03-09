@@ -197,7 +197,7 @@
                 <h2>Pay Types</h2>
                 <p>Pay types are pay components that could be included in a payroll for the employee but, are not worked out from the main salary. Possible examples are a holiday pay rate or a bonus for working on the weekend.</p>
                 <p>You can add a new type by clicking the edit button on the right then, add a new type. For the new type, it will ask for a name, default units, and default value. The defaults can be overridden in the payroll but if you know what they are in advance it makes it easier to input each time. If both defaults have a value then the type will be added automatically to each new payroll. Otherwise, one can be left at zero and the type will be available in the payroll but won't be added automatically.</p>
-                <p>The new type also has a number of flags that change the ways it behaves when the payroll run is completed. The flags work by deciding if the line total value for that type is included in various calculations.</p>
+                <p>The new type also has several flags that change the ways it behaves when the payroll run is completed. The flags work by deciding if the line total value for that type is included in various calculations.</p>
                 <ul class="label-description">
                     <li>
                         <span>Include when working out Tax</span>
@@ -277,6 +277,8 @@
                 <img src="screenshots/new-pay-type.png" alt="new pay type" />
                 <p>You can add a new pay type with the <b>add new type</b> button. This works in the same way as the pay types from the employee, look under employee <a href="#people-pay-types">Pay Types</a> for more info. By default, new types only apply to this payroll, if you want the new pay type to be included in the next payroll tick the Keep option.</p>
                 <p class="note">If you are running your payroll a few days in advance. You can override the payroll date from the box at the top. When the payroll is completed, all the payments will be tagged with this date.</p>
+                <p>You can remove all the lines for an employee and Smart Pay will generate a payslip for zero. This can be useful for weekly employees that are on holiday as it prevents gaps in their payslip history. If you want to remove them completely, simply remove the lines and then click the <b>remove employee</b> button. </p>
+                <p>Employees that have been added after the payroll was run, or that have been removed are listed at the bottom. If you want to add them back in use the <b>Add</b> button next to their name.</p>
             </div>
             <div id="payroll-details-payments">
                 <h2>Payments</h2>
