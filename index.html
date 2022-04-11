@@ -54,6 +54,7 @@
                     <li><a href="#calculator">Calculator</a></li>
                     <li><a href="#price">Pricing</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <li><a href="https://app.smartpay.im/Identity/Account/Login">Login</a></li>
                 </ul>
             </nav>
         </div>
@@ -63,34 +64,41 @@
         <!-- Home -->
         <div class="section home scroll-trigger" id="home">
             <div class="home-form" >
-                <div id="email-form">
-                    <h1>Smart Pay - The Island's Fully Hosted Payroll</h1>
+                <div id="home-intro">
+                    <h1>Smart Pay - Online Payroll for the Isle of Man</h1>
                     <p>Sign up today to get your first month free! No contract or credit card required.</p>
-                    <a class="button" id="subscription-button-small" href="https://app.smartpay.im/Identity/Account/Register">Get Started</a>
+                    <div class="home-intro-buttons" id="home-intro-buttons">
+                        <a class="button" id="subscription-button-small" href="https://app.smartpay.im/Identity/Account/Register">Get Started for Free</a>
+                        <a class="button moreinfo" id="home-moreinfo">I Would Like To Know More</a>
+                    </div>
                 </div>
-                <div id="email-form" style="display: none;">
-                    <h1>Smart Pay - The Island's Fully Hosted Payroll</h1>
-                    <p>Sign up today to get access and your first month free! No contract or credit card required.</p>
-    
-                    <form id="email-form" name="email-form" class="contact-form">
-                        <input type="hidden" id="form-source" name="form-source" value="smartpay.im">
-                        <input type="email" id="form-email" name="form-email" class="form-control" placeholder="Your email" required="required"><br/>
-                        <button type="sibmit" class="button">Give me priority access!</button>
+                <div id="moreinfo-form" style="display: none;">
+                    <form id="email-form" name="email-form" class="">
+                        <input type="hidden" name="form-source" value="smartpay.im MoreInfo">
+                        <div class="email-form-multi">
+                            <input type="text" name="form-firstname" class="form-control" placeholder="First name" required="required">
+                            <input type="text" name="form-lastname" class="form-control" placeholder="Last name" required="required">
+                        </div>
+                        <div class="email-form-single">
+                            <input type="text" name="form-company" class="form-control" placeholder="Company name" required="required">
+                        </div>
+                        <div class="email-form-single">
+                            <input type="email" name="form-email" class="form-control" placeholder="Email" required="required">
+                        </div>
+                        <button type="sibmit" class="button moreinfo">Tell Me More</button>
                     </form>
                 </div>
                 <div id="email-form-success">
-                    <h2>Thank you for signing up for early access!</h2>
-                    <p>
-                        As soon as Smart Pay is ready to go, we will be in touch to let you know how to claim your first month free.
-                    </p>
-                    <p>
-                        In the meantime, feel free to get in touch on <a href="mailto:earlyaccess...smarttech.im" class="email">earlyaccess...smarttech.im</a> if you have any questions or ideas you want to share.
-                    </p>
+                    <h2>Thank You for Your Interest</h2>
+                    <p>We will be in touch with more details as soon as we can.</p>
+                    <p>In the meantime, feel free to drop us an email at <a href="mailto:hello...smarttech.im" class="email">hello...smarttech.im</a> if you have any questions or suggestions you want to share.</p>
                 </div>
     
                 <script>
                     const scriptURL = 'https://script.google.com/macros/s/AKfycby9ggkbytzJV5dQ9FzFoTXUMa88HXlHK5IrJqjgAM9rd-jtdwCdj3IJIw/exec'
                     const form = document.forms['email-form']
+                    const button = document.getElementById('home-moreinfo');
+                    const buttonBlock = document.getElementById('home-intro-buttons');
     
                     function Success() {
                         var form = document.getElementById("email-form");
@@ -106,12 +114,20 @@
                       fetch(scriptURL, { method: 'POST', body: new FormData(form)})
                         .then(response => Success())
                         .catch(error => console.log('Error!', error.message))
-                    })
+                    });
+
+                    button.addEventListener('click', e => {
+                        e.preventDefault();
+                        
+                        var form = document.getElementById("moreinfo-form");
+                        form.style.display = "block";
+                        button.style.display = "none";
+                    });
                 </script>
     
     
                 <div>
-                    <a href="#overview">Scroll down to find out more.</a>
+                    <a href="#overview" class="scroll-down">Scroll down to find out more.</a>
                 </div>
             </div>
             
@@ -371,7 +387,7 @@
     
                 <div class="contact-form-group">
                     <form id="contact-form-footer" name="contact-form-footer" class="contact-form contact-form-footer">
-                        <input type="hidden" id="form-source" name="form-source" value="smartpay.im-contact">
+                        <input type="hidden" id="form-source" name="form-source" value="smartpay.im Contact">
                         <div class="contact-form-items">
                             <input type="text" id="form-name" name="form-name" placeholder="Your name" class="form-control" required="required">
                             <input type="email" id="form-email" name="form-email" class="form-control" placeholder="E-mail address" required="required">

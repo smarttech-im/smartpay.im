@@ -64,6 +64,8 @@ button {
     -webkit-box-sizing:content-box; 
     box-sizing:content-box;
     min-width: 8em;
+    font-size: 1em;
+    cursor: pointer;
 }
 
 .content {
@@ -211,32 +213,8 @@ button {
     background: #000000 url('images/header-parallax.jpg') no-repeat center 0px / cover;
     background-attachment: fixed;
     background-size: cover auto;
-    /*padding: 30vh 20vw 10vh 10vw;*/
     color: #ffffff;
     min-height: 90vh !important;
-}
-
-.home-form {
-    position: absolute;
-    top: 30vh;
-    left: 20vw;
-}
-
-#email-form input {
-    width: 30vw !important;
-    min-width: 144px;
-}
-
-#email-form button {
-    width: 30vw !important;
-    min-width: 144px;
-}
-
-.home  a {
-    display: block;
-    padding-top: 4em;
-    text-decoration: none;
-    color: #ffffff;
 }
 
 .home a.button {
@@ -250,6 +228,80 @@ button {
     border: 1px solid #11bb11;
     min-width: 8em;
     width: 16em;
+    cursor: pointer;
+}
+
+.home-intro-buttons {
+    margin-top: 2em;
+}
+
+.home-intro-buttons a.button {
+    display: inline-block;
+    margin-right: 3em;
+}
+
+.home .moreinfo {
+    background-color: #116cbb !important;
+    border-color: #116cbb !important;
+}
+
+.home-form {
+    position: absolute;
+    top: 30vh;
+    left: 20vw;
+}
+
+#form-company,
+#form-email {
+    width: 30vw !important;
+    min-width: 144px;
+}
+
+.form-name {
+    width: 32vw !important;
+    min-width: 144px;
+    display: flex;
+    justify-content: stretch;
+}
+
+#email-form {
+    margin-top: 1em;
+}
+
+#email-form > input {
+    width: 32vw !important;
+    min-width: 144px;
+}
+
+#email-form > div {
+    display: flex;
+    gap: 0.5em;
+    width: 32vw !important;
+    min-width: 144px;
+    justify-content: space-between;
+}
+
+#email-form > div.email-form-multi > input {
+    width: 44%;
+}
+
+#email-form > div.email-form-single > input {
+    width: 100%;
+}
+
+#email-form button {
+    padding: 0;
+    height: 3em;
+    width: 32vw !important;
+    min-width: 70px;
+    font-size: 1em;
+}
+
+.home  a.scroll-down {
+    display: block;
+    margin-top: 4em;
+    text-decoration: none;
+    color: #ffffff;
 }
 
 #email-form-success {
@@ -623,11 +675,20 @@ div.text p {
         padding-right: 8vw;
     }
 
+    #email-form > div {
+        flex-wrap: wrap;
+    }
+
+    #email-form > div.email-form-multi > input {
+        width: 100%;
+    }
+
     .contact-form-footer {
         *margin:  0vw 0vw 0vw 8vw;
     }
 
     #email-form > input,
+    #email-form > div,
     #email-form > button,
     .contact-form-footer input ,
     .contact-form-footer textarea, 
