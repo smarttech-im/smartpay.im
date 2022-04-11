@@ -233,6 +233,11 @@ li {
 
 /* print view */
 @media print {
+
+    .menu-icon {
+        display: none;
+    }
+    
     h1 { 
         color: var(--colour-text);
         font-size: 2.5em;
