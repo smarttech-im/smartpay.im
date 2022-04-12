@@ -210,7 +210,7 @@ button {
 /* Home */
 
 .home {
-    background: #000000 url('images/header-parallax.jpg') no-repeat center 0px / cover;
+    background: #000000 url('images/header-manx.jpg') no-repeat center 0px / cover;
     background-attachment: fixed;
     background-size: cover auto;
     color: #ffffff;
@@ -309,7 +309,7 @@ button {
 }
 
 .anlge-bg {
-    margin-top: -100px;
+    margin-top: -97px;
     height: 100px;
     background: url(images/cloud-border.png) no-repeat scroll center bottom / 100% auto;
 }
