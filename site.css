@@ -217,7 +217,8 @@ button {
     min-height: 90vh !important;
 }
 
-.home a.button {
+.home a.button,
+.overview a.button {
     text-align: center;
     margin-top: 3em;
     text-decoration: none;
@@ -240,7 +241,7 @@ button {
     margin-right: 3em;
 }
 
-.home .moreinfo {
+.moreinfo {
     background-color: #116cbb !important;
     border-color: #116cbb !important;
 }
@@ -264,16 +265,16 @@ button {
     justify-content: stretch;
 }
 
-#email-form {
+.email-form {
     margin-top: 1em;
 }
 
-#email-form > input {
+.email-form > input {
     width: 32vw !important;
     min-width: 144px;
 }
 
-#email-form > div {
+.email-form > div {
     display: flex;
     gap: 0.5em;
     width: 32vw !important;
@@ -281,15 +282,15 @@ button {
     justify-content: space-between;
 }
 
-#email-form > div.email-form-multi > input {
+.email-form > div.email-form-multi > input {
     width: 44%;
 }
 
-#email-form > div.email-form-single > input {
+.email-form > div.email-form-single > input {
     width: 100%;
 }
 
-#email-form button {
+.email-form button {
     padding: 0;
     height: 3em;
     width: 32vw !important;
@@ -337,6 +338,11 @@ button {
 
 .overview li {
     margin-bottom: 1em;
+}
+
+.overview .home-intro-buttons > a  {
+    margin-right: 1em;
+
 }
 
 /* Screenshots */

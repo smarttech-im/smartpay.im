@@ -73,8 +73,8 @@
                     </div>
                 </div>
                 <div id="moreinfo-form" style="display: none;">
-                    <form id="email-form" name="email-form" class="">
-                        <input type="hidden" name="form-source" value="smartpay.im MoreInfo">
+                    <form id="email-form" name="email-form" class="email-form">
+                        <input type="hidden" name="form-source" value="smartpay.im MoreInfo-Home">
                         <div class="email-form-multi">
                             <input type="text" name="form-firstname" class="form-control" placeholder="First name" required="required">
                             <input type="text" name="form-lastname" class="form-control" placeholder="Last name" required="required">
@@ -98,7 +98,6 @@
                     const scriptURL = 'https://script.google.com/macros/s/AKfycby9ggkbytzJV5dQ9FzFoTXUMa88HXlHK5IrJqjgAM9rd-jtdwCdj3IJIw/exec'
                     const form = document.forms['email-form']
                     const button = document.getElementById('home-moreinfo');
-                    const buttonBlock = document.getElementById('home-intro-buttons');
     
                     function Success() {
                         var form = document.getElementById("email-form");
@@ -140,24 +139,83 @@
         <!-- Overview -->
         <div class="section overview scroll-trigger" id="overview">
             <div>
-                <h2>Smart Pay Is Different</h2>
-                <p>With desktop software you need to get it installed on your computer, setup a backup, and keep up with updates.</p>
-                <p>Then, after all that, you still need to manually archive everything to a filing cabinet to keep a long term record.</p>
+                <h2>Smart Pay: Fast. Simple. Secure. Affordable.</h2>
+                <p>Whatever size your business is, there is now a simple, easy solution to manage your payroll from a single employee to hundreds.</p>
+                <p>And the benefits just keep coming! Everything you ever wanted or needed to simplify your payroll (and more), accessible from anywhere you have an internet connection, and on any device!</p>
                 <br/>
 
-                <p><b>With Smart Pay, it is all done for you!</b></p>
+                <p><b>With Smart Pay, it is all done for you:</b></p>
                 <ul>
-                    <li><b>Device:</b> If you don't want a desktop computer, now it's optional! Smart Pay works just as well on an iPad or a phone.</li>
-                    <li><b>Security:</b> Full encryption to keep your employee's data safe.</li>
-                    <li><b>Payslips:</b> Payslips are delivered automatically by email out of the box. The monthly walk around the office is now optional!</li>
+                    <li><b>Simple:</b> Once you're set up with Smart Pay, you can run your monthly payroll in seconds, from wherever you are!</li>
+                    <li><b>Device:</b> Access Smart Pay from your desktop, laptop, tablet or smartphone.</li>
+                    <li><b>Security:</b> Full encryption to keep your company and employee's data safe.</li>
+                    <li><b>Payslips:</b> One-click payroll run with automatic emailing of payslips to all employees.</li>
                     <li><b>Backup:</b> As a hosted solution, your data is fully versioned and backed-up every night.</li>
-                    <li><b>Update:</b> Software updates happen seamlessly in the background. So you are always on the latest version.</li>
+                    <li><b>Updates:</b> No need to remember to download updates, all updates are automatically applied for you without you doing anything.</li>
                     <li><b>Tax Rates:</b> Updated tax rates are added for you as soon as they are released, no more manually updating each year.</li>
-                    <li><b>Isle of Man:</b> We calculate the payroll using Manx Tax rules. So you don't need to work around a UK solution.</li>
-                    <li><b>Changes:</b> All changes are saved and versioned. So no matter what you can always go back to where you were.</li>
-                    <li><b>Your Data:</b> If you want a copy of every payslip and report sent out. You can. In a single click! It's your data, and we respect that.</li>
+                    <li><b>Isle of Man:</b> Smart Pay is based specifically on Manx tax rules so you don't need to work around a UK solution.</li>
+                    <li><b>Changes:</b> All changes are saved and versioned meaning you can always go back to where you were.</li>
+                    <li><b>Access:</b> Employees can be given access to their records on Smart Pay. Saving you time and keeping them happy.</li>
+                    <li><b>Your Data:</b> Your history is all there, if you want a copy of every payroll you have run on Smart Pay, it's available with a single click. It's your data, and we respect that.</li>
                 </ul>
-                <p>You can still keep the filing cabinet if you want. But now that is up to you!</p>
+                <p>For businesses or business advisers (accountants etc) who manage payrolls of any size, Smart Pay is the modern, simple, secure and affordable solution.</p>
+                <p>Sign up today for your free, no-obligation trial - no contract or credit card details required! Or click the "I Would Like To Know More" button for more details or to discuss your specific requirements.</p>
+                
+                <div class="home-intro-buttons" id="home-intro-buttons">
+                    <a class="button" id="subscription-button-small" href="https://app.smartpay.im/Identity/Account/Register">Get Started for Free</a>
+                    <a class="button moreinfo" id="overview-moreinfo">I Would Like To Know More</a>
+                </div>
+
+                <div id="overview-moreinfo-form" style="display: none;">
+                    <form id="overview-email-form" name="overview-email-form" class="email-form">
+                        <input type="hidden" name="form-source" value="smartpay.im MoreInfo-Overview">
+                        <div class="email-form-multi">
+                            <input type="text" name="form-firstname" class="form-control" placeholder="First name" required="required">
+                            <input type="text" name="form-lastname" class="form-control" placeholder="Last name" required="required">
+                        </div>
+                        <div class="email-form-single">
+                            <input type="text" name="form-company" class="form-control" placeholder="Company name" required="required">
+                        </div>
+                        <div class="email-form-single">
+                            <input type="email" name="form-email" class="form-control" placeholder="Email" required="required">
+                        </div>
+                        <button type="sibmit" class="button moreinfo">Tell Me More</button>
+                    </form>
+                </div>
+                <div id="overview-form-success" style="display: none;">
+                    <h2>Thank You for Your Interest</h2>
+                    <p>We will be in touch with more details as soon as we can.</p>
+                    <p>In the meantime, feel free to drop us an email at <a href="mailto:hello...smarttech.im" class="email">hello...smarttech.im</a> if you have any questions or suggestions you want to share.</p>
+                </div>
+    
+                <script>
+                    const overviewForm = document.forms['overview-email-form']
+                    const overviewButton = document.getElementById('overview-moreinfo');
+    
+                    function overviewSuccess() {
+                        var form = document.getElementById("overview-moreinfo-form");
+                        form.style.display = "none";
+    
+                        var thankYou = document.getElementById("overview-form-success");
+                        thankYou.style.display = "block";
+                    };
+    
+                    overviewForm.addEventListener('submit', e => {
+                      e.preventDefault()
+                      overviewSuccess()
+                      fetch(scriptURL, { method: 'POST', body: new FormData(overviewForm)})
+                        .then(response => overviewSuccess())
+                        .catch(error => console.log('Error!', error.message))
+                    });
+
+                    overviewButton.addEventListener('click', e => {
+                        e.preventDefault();
+                        
+                        var form = document.getElementById("overview-moreinfo-form");
+                        form.style.display = "block";
+                        overviewButton.style.display = "none";
+                    });
+                </script>
             </div>
         </div>
         <!-- Overview end -->
