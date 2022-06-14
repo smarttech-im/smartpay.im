@@ -495,6 +495,42 @@ div.text p {
     min-width: 8em;
 }
 
+/* About */
+
+.about {
+    display: flex;
+    justify-content: center;
+    padding-top: 20%;
+}
+
+.about h2 {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.about div {
+    width: 80vw;
+    max-width: 600px;
+}
+
+.about a {
+    text-decoration: none;
+}
+
+.about .botton {
+    text-align: center;
+    margin-top: 10vh;
+}
+
+.about .botton > a {
+    text-decoration: none;
+    background-color: #11bb11;
+    border-radius: 4px;
+    padding: 1em;
+    border: 1px solid #11bb11;
+    min-width: 8em;
+}
+
 /* Price */
 
 .price {
