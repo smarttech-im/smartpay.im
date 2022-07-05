@@ -96,6 +96,7 @@
                 </div>
     
                 <script>
+                    const functionURL = 'https://ospinternaltools.azurewebsites.net/api/MoreInfo?'
                     const scriptURL = 'https://script.google.com/macros/s/AKfycby9ggkbytzJV5dQ9FzFoTXUMa88HXlHK5IrJqjgAM9rd-jtdwCdj3IJIw/exec'
                     const form = document.forms['email-form']
                     const button = document.getElementById('home-moreinfo');
@@ -111,6 +112,9 @@
                     form.addEventListener('submit', e => {
                       e.preventDefault()
                       Success()
+                      fetch(functionURL, { method: 'POST', body: new FormData(form), mode: 'no-cors'})
+                        .then(response => console.log('Message sent!', ''))
+                        .catch(error => console.log('Error!', error.message))
                       fetch(scriptURL, { method: 'POST', body: new FormData(form)})
                         .then(response => Success())
                         .catch(error => console.log('Error!', error.message))
@@ -204,6 +208,9 @@
                     overviewForm.addEventListener('submit', e => {
                       e.preventDefault()
                       overviewSuccess()
+                      fetch(functionURL, { method: 'POST', body: new FormData(overviewForm), mode: 'no-cors'})
+                        .then(response => console.log('Message sent!', ''))
+                        .catch(error => console.log('Error!', error.message))
                       fetch(scriptURL, { method: 'POST', body: new FormData(overviewForm)})
                         .then(response => overviewSuccess())
                         .catch(error => console.log('Error!', error.message))
@@ -476,6 +483,7 @@
                     </div>
     
                     <script>
+                        const scriptURLFunction = 'https://ospinternaltools.azurewebsites.net/api/ContactForm?'
                         const scriptURLFooter = 'https://script.google.com/macros/s/AKfycby9ggkbytzJV5dQ9FzFoTXUMa88HXlHK5IrJqjgAM9rd-jtdwCdj3IJIw/exec'
                         const formFooter = document.forms['contact-form-footer']
     
@@ -490,6 +498,9 @@
                         formFooter.addEventListener('submit', e => {
                         e.preventDefault()
                         SuccessFooter()
+                        fetch(scriptURLFunction, { method: 'POST', body: new FormData(formFooter), mode: 'no-cors'})
+                            .then(response => console.log('Message sent!', ''))
+                            .catch(error => console.log('Error!', error.message))
                         fetch(scriptURLFooter, { method: 'POST', body: new FormData(formFooter)})
                             .then(response => SuccessFooter())
                             .catch(error => console.log('Error!', error.message))
